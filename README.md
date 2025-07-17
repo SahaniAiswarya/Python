@@ -121,7 +121,7 @@ print(" ".isspace())
 #assign operator
 num=100
 print(num)
-# or print("this is a sample",num)
+#or print("this is a sample",num)
 
 #increment in operators
 num=1
