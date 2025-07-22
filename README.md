@@ -304,6 +304,64 @@ print(a<b)
 print(a>=b)
 print(b>a)
 
+#concatination string
+s1="india"
+s2="won"
+result=s1+"  "+s2
+print(result)
+
+#search or replace
+str="India won the match by 5 wickets"
+print(str.find("5"))
+print(str.replace("5","9"))
+print(str.replace("wickets","runs today"))
+
+#split and join
+str="alpha,beta,gamma"
+parts=str.split(",")
+print(parts)
+joined=":".join(parts)
+print(joined)
+joined=",".join(parts)
+print(joined)
+
+#center function
+str="india"
+print(str.center(20,"*"))
+
+#count
+str='he'
+text='hellohellhellohellhellohellohell'
+print(text.count(str,0,len(text)))
+
+#startwith and endwith .........searching
+str1="dog is humans best friends"
+str2="the climate is very dangerous"
+print(str1.endswith("end",0,len(str1)))
+print(str2.startswith("th",0,len(str2)))
+
+#find anothr method
+text="how was the meal today?"
+print(text.find("meal",0,len(text)))
+print(text.rfind("is",0,len(text)))
+
+text="jamesbond007"
+print(text.isalpha())
+print(text.isalnum())
+print(text.isdigit())
+print(text.isspace())
+print(text.isupper())
+print(text.islower())
+print(text.istitle())
+
+str="hi"
+print(str.ljust(20,"#"))
+print(str.ljust(20,"-"))
+print(str.ljust(2,"#"))
+print(str.ljust(10,"&"))
+print(str.ljust(12,"*"))
+print(str.rjust(12,"*"))
+
 
 
 
