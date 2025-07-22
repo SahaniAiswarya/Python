@@ -198,6 +198,97 @@ for sub in nest:
         flat.append(item)
 print(flat)
 
+#list with in a tuple
+student=("vijay",[20,45,90],['math','science','english'])
+print(student[2])
+print(student[1])
+print(student[0])
+print(student[2][1])
+
+#tuple sample
+info=("vijay",33,'engineer')
+print(info[0])
+print(info[-1])
+print(len(info))
+print(info*2)
+print(info +(3,4))
+print(info +('1234',5))
+
+#nested tuple or tuple within tiple
+nest=((1,2),(3,4),(5,6))
+print(nest[0])
+nest=((1,2),('a','b'),(5,6))
+print(nest[1])
+nest=((1,2),('a',7),(5,6))
+print(nest[1][1])
+
+#dictionary operations
+person={'name':'aiswarya','age':20,'city':'vijayawada'}
+print(person)
+print("accessing and modify the the person age:")
+person["age"]=21
+print(person)
+print("adding and deletind")
+person["email"]='aiswaryasahani@gmail.com'
+print(person)
+del person["city"]
+print(person)
+print("all keys and values:")
+print(person.keys())
+print(person.values())
+print(person.items())
+print(person.get("age"))
+
+#nested dictionary
+info={"vijay":{"salary":12000,"perks":3000},"marks":{"salary":18000,"perks":5000}}
+print(info['marks']['perks'])
+
+#dict with tuple keys
+location={(40,7128,-73.070):"new york",(34.0522,-119.234):"mumbai"}
+print(location[(40,7128,-73.070)])
+
+info={'name':'india','number':'123'}
+v='india'
+for key,value in info.items():
+    if value==v:
+        print(f"key for value '{v}':{key}")
+
+        
+#set operations
+my_set={1,2,3,4}
+print("add and remove values")
+my_set.add(7)
+print(my_set)
+my_set.remove(2)
+print(my_set)
+my_set.discard(5)
+print(my_set)
+print("membership check")
+print(1 in my_set)
+print(10 in my_set)
+
+#operations
+print("union")
+a={1,2,3}
+b={3,4,5}
+print(a.union(b))
+print("intersection")
+print(a.intersection(b))
+print("difference")
+print(a.difference(b))
+print(" symmetricdifference")
+print(a.symmetric_difference(b))
+
+a={1,2}
+b={1,2,3,4,5}
+print(a.issubset(b))
+print(b.issubset(a))
+print(a<=b)
+print(a<b)
+print(a>=b)
+print(b>a)
+
+
 
 
 
