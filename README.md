@@ -156,6 +156,22 @@ num2=str(input())
 fullname=num1+num2
 print(fullname)
 
+#increment
+num=1
+num=num+1 # or num+=1 
+print(num)
+num-=1 
+print(num)
+num*=1
+print(num)
+num%=1
+print(num)
+num/=1
+print(num)
+num//=1
+print(num)
+
+
 n1=float(input("enter a float value"))
 n2=float(input("enter a float value"))
 print("division",n1/n2)
