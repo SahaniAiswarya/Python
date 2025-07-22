@@ -190,6 +190,14 @@ l2=[[1,2],[3,4]]
 l2.append([11,22])
 print(l2)
 
+#flatten
+nest=[[1,2],[3,4],[5,6]]
+flat=[]
+for sub in nest:
+    for item in sub:
+        flat.append(item)
+print(flat)
+
 
 
 
