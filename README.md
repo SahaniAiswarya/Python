@@ -118,6 +118,10 @@ print("hi".isupper())
 #isspace
 print(" ".isspace())
 
+
+
+
+
 #assign operator
 num=100
 print(num)
@@ -214,6 +218,10 @@ for sub in nest:
         flat.append(item)
 print(flat)
 
+
+
+
+
 #list with in a tuple
 student=("vijay",[20,45,90],['math','science','english'])
 print(student[2])
@@ -304,6 +312,10 @@ print(a<b)
 print(a>=b)
 print(b>a)
 
+
+
+
+
 #concatination string
 s1="india"
 s2="won"
@@ -361,6 +373,35 @@ print(str.ljust(2,"#"))
 print(str.ljust(10,"&"))
 print(str.ljust(12,"*"))
 print(str.rjust(12,"*"))
+
+#zfill
+str="1234"
+print(str.zfill(4))
+print(str.zfill(5))
+print(str.zfill(10))
+print(str.zfill(3))
+print(str.zfill(2))
+print(str.zfill(1))
+
+str='6'
+print(str.zfill(4))
+
+#enumerate
+str="vijay komarapu"
+print(list(enumerate(str)))
+
+str="vijay"
+print(str.swapcase())
+str="sonic the dedgehog"
+print(str.capitalize())
+print(str.title())
+
+#strip(remove space)
+s='   hi aiswarya  '
+print(s.strip())
+print(s.lstrip())
+print(s.rstrip())
+
 
 
 
