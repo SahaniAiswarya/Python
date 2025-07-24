@@ -5,7 +5,7 @@ a,b=b,a
 print(a,b)
 
 
-#temporarily variable swaping
+#temporarily variable swaping 
 a=1
 b=2
 print("a:",a)
