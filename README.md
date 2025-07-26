@@ -799,6 +799,58 @@ else:
 
 
 
+#looping statements
+loop=0
+while loop<=10:
+    print(loop) #print(loop,end=" ")
+    loop+=1
+
+
+loop=0
+while loop<=10:
+    print("aiswarya",end=' ')
+    loop+=1
+
+
+loop=0
+while loop<=10:
+    print("aiswarya",end=' ')
+    print("sahani",end='  - ')
+    loop+=1
+
+
+loop=0
+while loop<=10:
+    print("vijay",end=' ')
+    print("cricket",end='  - ')
+    loop+=1
+print("looping over as condition fails")
+
+
+#print sum of first natural number
+sum=0
+i=1
+n=int(input("enter the value of n:"))
+while i<=n:
+    sum+=i
+    i+=1
+print("total",sum)
+
+
+#reverse a 4 digit number
+n=int(input("enter the number"))
+rev=0
+print(n)
+while n>0:
+    d=n%10
+    rev=rev*10+d
+    n//=10
+print(rev)
+
+
+
+
+
 
 
 
