@@ -837,6 +837,14 @@ while i<=n:
 print("total",sum)
 
 
+#reverse of natural number
+n=int(input("enter he number"))
+i=n
+while i>=1:
+    print(i,end=' ')
+    i=i-1
+
+    
 #reverse a 4 digit number
 n=int(input("enter the number"))
 rev=0
@@ -845,6 +853,76 @@ while n>0:
     d=n%10
     rev=rev*10+d
     n//=10
+print(rev)
+
+
+#another method of reverse a 4 digit number
+n=int(input("enter the number"))
+while n!=0:
+    t=n%10
+    print(t,end='')
+    n//=10
+
+
+#for var the range(start,stop)
+n=int(input("enter the number:"))
+for i in range(1,n+1,3):
+    print(i,end=" ")
+
+
+#for loop using string
+name="mississippi"
+for char in name:
+    print(char,end=" ")
+
+
+#lists in for loop
+items=["maggie","5-star","borbon","lays"]
+for sale in items:
+    print(sale)
+
+
+#reverse n numbers using for loop
+n=int(input("enter the number"))
+for i in range(n,0,-1):
+    print(i,end=" ")
+    
+#another for reverse n number usimg for loop
+for i in range(10,0,-1):
+    print(i,end=" ")
+
+
+#all squares uptp 10 using for loop
+for i in range(1,11):
+    print(i**2,end=" ")
+
+#another all squares upto given n using for loop
+n=int(input("enter the number"))
+for i in range(1,11):
+    print(i**2,end=" ")
+
+
+#lists in for loop
+items=["maggie","5-star","borbon","lays"]
+for sale in items:
+    print(sale)
+
+
+#factorial using for loop
+n=int(input("enter the number:"))
+if n==0:
+    f=1
+f=1
+for i in range(1,n+1):
+    f=f*i
+    print("factorial of",n,"is",f)
+
+
+#reverse of string using for loop
+s="mississippi"
+rev=" "
+for c in s:
+    rev=c+rev
 print(rev)
 
 
