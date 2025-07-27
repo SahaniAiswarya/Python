@@ -1456,6 +1456,100 @@ for k in matrix:
 
 
 
+rows=int(input("enter rows"))
+pattern=[''.join(['*' for j in range(i)]) for i in range(1,rows+1)]
+for line in pattern:
+        print(line)
+
+
+rows=int(input("enter rows"))
+pattern=[' '.join([chr(97+j) for j in range(i)]) for i in range(1,rows+1)]
+for line in pattern:
+        print(line)
+
+
+rows=int(input("enter rows"))
+pattern=[' '.join([str(num) for num in range(1,rows-i+1)]) for i in range(rows)]
+for line in pattern:
+        print(line)
+
+
+n=int(input("enter rows"))
+pattern=[['*' if i==0 or i==n-1 or j==0 or j==n-1 else ' ' for i in range(n)] for j in range(n)]
+for i in pattern:
+        print(''.join(i))
+        
+
+n=int(input("enter rows"))
+upper=[' '*(n-i)+''.join('*' if j==0 or j==2*i else ' ' for j in range(2*i+1)) for i in range(n)]
+lower=[' '*(i+2)+''.join('*' if j==0 or j==2*(n-i-2) else ' ' for j in range(2*(n-i)-1)) for i in range(n-1)]
+for line in upper+lower:
+        print(line)
+
+
+
+
+
+
+
+
+class calc:
+    def __init__(self,a,b):
+        self.a=a
+        self.b= b 
+        print("cal obj created")
+    def add(self):
+        return self.a+self.b
+    def sub(self):
+        return self.a-self.b
+    def __del__(self):
+        print("created calc obj was deleted")
+a=int(input("enter a:"))
+b=int(input("enter b:"))
+c=calc(a,b)
+print("addition:",c.add())
+print("subtraction:",c.sub())
+del calc
+
+
+#area=pir^2      circumference=2pir
+import math
+class rectangle:
+    def __init__(self,r):
+        self.r=r
+        print("object is created")
+    def area(self):
+        return math.pi*self.r*self.r
+    def circumference(self):
+        return 2*math.pi*self.r
+    def __del__(self):
+        print("created calc objected was deleted")
+r=int(input("enter the radius:"))
+b=rectangle(r)
+print("area of a circle",b.area())
+print("circumference of a circle",b.circumference())
+del rectangle
+
+
+class RowSum:
+    def __init__(self,matrix):
+        self.matrix=matrix
+    def __getitem__(self,row):
+        return sum(self.matrix[row])
+    def __setitem__(self,row,new_row):
+        self.matrix[row]=new_row
+m=RowSum([[1,2],[3,4],[5,6]])
+print(m[0])
+print(m[2])
+m[1]=[10,20]
+print(m[1])
+
+
+
+
+
+
+
 
 
 
