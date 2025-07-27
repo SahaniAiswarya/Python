@@ -1059,6 +1059,97 @@ print("factorial",sfact(num))
 
 
 
+#scope and lifetime of arguments in a function
+num=int(input("enter the number:"))
+print(num)
+def modify():
+    global num
+    num=100
+modify()
+print(num)
+
+
+#tuggle state function
+#tuggling a global flag
+is_active=False
+def toggle_state():
+    global is_active
+    is_active=not is_active
+    return is_active
+print(f"initial state:{is_active}")
+toggle_state()
+print(f"state after 1st toggle:{is_active}")
+toggle_state()
+print(f"state after 2nd toggle:{is_active}")
+toggle_state()
+
+
+#annutations
+def add(a:int,b:int): #->int
+    return a+b
+a=int(input("enter the a value:"))
+b=int(input("enter the b value:"))
+print(add(a,b))
+
+
+#area of rectangle with single annutation
+def area(l:int,b:int)->int:
+    return l*b
+x=int(input("enter the x value:"))
+y=int(input("enter the y value:"))
+print(area(x,y))
+l=int(input("enter the l value:"))
+b=int(input("enter the b value:"))
+print(area(l,b))
+
+
+from typing import List,Optional
+def names(n:List[str],separator:Optional[str]=" ")->str:
+    return separator.join(n)
+print(names(["vijay","mark","steve"]))
+print(names(["CSE","ECE"],separator="-"))
+
+
+#tuple arg keyboard function
+#sun of n user i/p values by tuple arg
+def sumnum(*args):
+    return sum(args)
+nums=input("enter the number separated by space:")
+numbers=[float(x) for x in nums.split()]
+result=sumnum(*numbers)
+print(f"sum:{result}")
+
+
+def sortnum(*args):
+    return sorted(args)
+nums=input("enter the number separated by space:")
+numbers=[int(x) for x in nums.split()]
+result=sortnum(*numbers)
+print(f"sorted:{result}")
+x=result[::-1]
+print("descending:",x)
+
+
+#keyword argument
+def info(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}:{value}")
+info(name="vijay",age=32)
+
+
+def info(hi,**kwargs):
+    print(hi)
+    for key,value in kwargs.items():
+        print(f"{key}=>{value}")
+info("Hello!",name="vijay",age=32,city="vijayawada")
+
+
+
+
+
+
+
+
 
 
 
