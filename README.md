@@ -1232,6 +1232,70 @@ print(nest(5))
 
 
 
+#Error handling
+#Zero division error
+num=int(input("enter the number:"))
+deno=int(input("enter the denominator:"))
+try:
+    quo=num/deno
+    print("Quotient",quo)
+except ZeroDivisionError:
+    print("Denominator cannot be a zero")
+
+
+#multiple exceptions
+try:
+    num=int(input("enter the number:"))
+    print(num**3)
+except(KeyboardInterupt):
+    print("you should have entered data without interrupting the compiler")
+except(ValueError):
+    print("enter number only")
+print("program terminated")
+print("Bye")
+
+
+#multiple exceptions with single block
+try:
+    num=int(input("enter the number:"))
+    print(num**3)
+except(KeyboardInterupt):
+    print("you should have entered data without interrupting the compiler")
+except(KeyboardInterupt,ValueError,TypeError):
+    print("something")
+
+
+try:
+    num=int(input("enter the number:"))
+#raise ValueError
+    print(num**2)
+    raise ValueError
+except:
+    print("exception occued")
+
+
+#re-raise an exception
+try:
+    raise NameError
+except: 
+    print("Re-raising the exception")
+    raise
+
+
+try:
+    raise Exception("vijay","EEE")
+except Exception as Errorobj:
+    print(type(Errorobj))
+    print(Errorobj.args)
+    arg1,arg2=Errorobj.args
+    print("1st argument",arg1)
+    print("2nd argument",arg2)
+
+
+
+
+
+
 
 
 
