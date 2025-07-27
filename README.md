@@ -1384,6 +1384,7 @@ words=["apple","banana","cherry"]
 print([word.upper() for word in words])
 
 
+ 
 
 
 
@@ -1493,6 +1494,7 @@ for line in upper+lower:
 
 
 
+
 class calc:
     def __init__(self,a,b):
         self.a=a
@@ -1510,6 +1512,7 @@ c=calc(a,b)
 print("addition:",c.add())
 print("subtraction:",c.sub())
 del calc
+
 
 
 #area=pir^2      circumference=2pir
@@ -1531,6 +1534,7 @@ print("circumference of a circle",b.circumference())
 del rectangle
 
 
+
 class RowSum:
     def __init__(self,matrix):
         self.matrix=matrix
@@ -1543,6 +1547,98 @@ print(m[0])
 print(m[2])
 m[1]=[10,20]
 print(m[1])
+
+
+
+
+
+
+
+
+class number:
+    evens=[]
+    odds=[]
+    def __init__(self,num):
+        self.num=num
+        if num%2==0:
+            number.evens.append(num)
+        else:
+            number.odds.append(num)
+n1=number(21)
+n2=number(32)
+n3=number(43)
+n4=number(54)
+n5=number(65)
+print("even mutable list:",number.evens)
+print("odd mutable list:",number.odds)
+
+
+
+def op(x):
+    return x**3
+class abc():
+    def __init__(self,val):
+        self.val=val
+    def display(self):
+        print("given value:",self.val)
+    def modify(self):
+        self.val=op(self.val)
+n=int(input("enter the value of n"))
+o=abc(n)
+o.display()
+o.modify()
+o.display()
+
+
+
+class abc():
+    def __init__(self,var1,var2):
+        self.var1=var1
+        self.var2=var2
+    def display(self):
+        print("var1",self.var1)
+        print("var2",self.var2)
+n1=int(input("enter n1:"))
+n2=float(input("enter n2:"))
+o=abc(n1,n2)
+print("object.__dict__-",o.__dict__)
+print("object.__doc__-",o.__doc__)
+print("class.__name__-",abc.__name__)
+print("object.__module__-",o.__module__)
+print("class.__base__-",abc.__base__)
+
+
+
+import sys
+class A:
+    num=10
+a=A()
+print(type(A))
+print(sys.getsizeof(A))
+print(sys.getsizeof(a))
+
+  
+
+class ATM:
+    def __init__(self):
+        self.balance=5000
+        self.pin="1234"
+    def process(self):
+        user_pin=input("enter 4_digit pin:")
+        if user_pin==self.pin:
+            amount=int(input("enter amount to debit:"))
+            if amount<=self.balance:
+                self.balance-=amount
+                print(f"{amount} debited. Remaining balance Rs.{self.balance}")
+            else:
+                print("insufficient funds!!!.Transaction cancelled.")
+atm=ATM()
+atm.process()
+
+
+
+
+
 
 
 
